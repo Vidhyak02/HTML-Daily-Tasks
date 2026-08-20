@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Admission</title>
+		<style>
+			h2{
+				color:white;
+				border:2px double black;
+				margin:0 4px;
+				padding:20px;
+				background-color:#04448C;
+				border-radius:25px;
+			}
+			
+			label{
+				color:#A8071F;
+				font-size:20px;
+				
+			}
+			input{
+				background-color:#EDC0C7;
+				border: 2px solid ; 
+				margin: 0 130px;
+				padding:3px;
+			}
+			form{
+				background-color:#CEDCE0;
+				border:5px groove #4D2236;
+				margin:30px 55px;
+				padding: 5 30px;
+				outline: 2px solid black;
+				outline-offset:3px;
+			}
+			.ma{
+				margin:0 0;
+			}
+			#maa{
+				color:#C70C8A;
+				padding: 10px;
+				margin: 0 0px;
+				font-size:20px;
+			}	
+			.cls{
+				border:2px solid black;
+				padding: 4px;
+				margin: 0 75px;
+			}
+			.clss{
+				border:2px solid black;
+				padding: 3px;
+				margin: 0 120px;
+			}
+			.clsss{
+				border:2px solid black;
+				padding: 3px;
+				margin: 0 157px;
+			}
+			select{
+				background-color:#EDC0C7;
+				border:2px solid black;
+				padding: 3px;
+				margin: 0 90px;
+			}
+			.clssss{
+				border:2px solid black;
+				padding: 3px;
+				margin: 0 175px;
+			}
+			.clsssss{
+				border:2px solid black;
+				margin: 0 0px;
+				font-size:20px;
+			}	
+			
+		</style>	
+	</head>	
+	<body>
+		<form>
+			<h2><center>COLLEGE ADMISSION FORM </h2></center><br>
+			<label>NAME</label><br><br>
+			<label>First Name</label>
+			<input type = "text" id = "firstname" name = "firstname" ><br><br>
+			<label>Last Name</label>
+			<input type = "text" id = "lastname" name = "lastname" ><br><br><br>
+			<label>GENDER</label><br><br>
+			<input class="ma" type = "radio" id = "male" name = "gender" ><span id = "maa">Male<br><br></span>
+			<input class="ma" type = "radio" id = "female" name = "gender" ><span id = "maa">Female</span><br><br>
+			<label>DATE OF BIRTH</label>
+			<input  class="cls" type = "date"><br><br><br>
+			<label>PHONE NO</label>
+			<input class="clss" type = "number" id = "phone" name = " phno" placeholder = "Enter Phone Number" required><br><br><br>
+			<label>EMAIL</label>
+			<input class="clsss" type = "email" id = "email" name = "email" placeholder = "Enter Email" required><br><br><br>
+			<label>DEPARTMENT</label>
+			<select>
+				<option>	</option>
+				<option>Computer Science</option>
+				<option>Artificial Intelligence</option>
+				<option>Information Technology</option>
+				<option>Machine Learning</option>
+			</select><br><br><br>
+			<label>TIME</label>
+			<input class= "clssss" type = "time" ><br><br>
+			<input class= "clsssss"type = "submit" Value = "Submit Form">
+			<input class= "clsssss" type = "reset"><br><br>
+		</form>
+	</body>
+</html>	
+	
