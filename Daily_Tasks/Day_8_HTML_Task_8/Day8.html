@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<title>SBI</title>
+		<style>
+			.start{
+				font-size:22px;
+				color:white;
+				border:10px solid #1D63F0;
+				background-color:#1D63F0;
+			}
+			.class{
+				font-size:25px;
+				color:#2434D6;
+				border:10px solid #DCE4F5;
+				background-color:#DCE4F5;  
+				
+			}			
+			h4{
+				color:red;
+			}
+			h3{
+				color:#1D63F0;
+			}
+			form{
+				border:2px solid #1C2945;
+				padding: 5 10px;
+			}
+			.one{
+				border:2px solid #A2A9FC;
+				padding: 4px;
+				margin: 0 181px;
+			}
+			.two{
+				border:2px solid #A2A9FC;
+				padding: 4px;
+				margin: 0 230px;
+			}
+			select{
+				border:2px solid #A2A9FC;
+				padding: 4px;
+				margin: 0 230px;
+			}
+			#amt{	
+				color:red;
+			}
+			.lab{
+				font-size:20px;
+				color:#1D63F0;
+			}
+			.onee{
+				border:2px solid #A2A9FC;
+				padding: 4px;
+				margin: 0 180px;
+			}
+			.o{
+				border:2px solid #A2A9FC;
+				padding: 4px;
+				margin-left: 100px;
+			}
+			.t{
+				color:white;
+				background-color:#F59442;
+				border:2px solid orange;
+				padding: 4px;
+				margin-left: 550px;
+			}
+			.tt{
+				color:white;
+				background-color:#F59442;
+				border:2px solid orange;
+				padding: 4px;
+				margin-left: 30px;
+			}
+		</style>	
+	</head>
+	<body>
+		<form>
+		<h3 class = "start" >You are here: / Payments / Transfers / Fund Transfers / Within SBI Transfer</h3>
+		<h3 class = "class">Within SBI-Account of others</h3>
+		<h4>Mandatory fields are marked with an asterick (*)</h4>
+		<h3>Select the account from which you wish to transfer funds</h3>
+		
+			<table border= "1" height =" 190" width = "740">
+			<th>Account no./Nickname</th>
+			<th>Account Type</th>
+			<th>Branch</th>
+			<th>Balance</th>
+			<tr align = "center">
+			<td><input type = "radio" id = "rdo" name = "rdo">0000101000029XXX</td>
+			<td>Savings Account</td>
+			<td>Gujarat</td>
+			<td>3400.0</td></tr>
+			</table><br>
+			<label>Account Number</label>
+			<input class="one" type="number" id = "no" name ="no" placeholder = "Enter Account Number"><br><br>
+			<label>Amount<span id = "amt">*</label>
+			<input class="two" type = "number" id = "no" name ="no" placeholder = "Enter Amount"> <label class="lab">Click here to add new Intra-Bank Beneficiary</label><br><br>
+			<label>Purpose<span id = "amt">*</label>
+			<select>
+				<option>--Select Purpose--</option>
+				<option>Gift for relatives</option>
+				<option>Hostel Rent</option>
+				<option>Electricity Bill</option>
+			</select>
+			<br><br><hr>
+			<h3>Select the Intra-Bank Beneficiary account</h3>
+			<table border = "1" height = "240" width = "920">
+				<th>Account No.</th>
+				<th>Intra-Bank Beneficiary Name</th>
+				<th>Branch</th>
+				<th>Limit</th>
+				<tr align = "center">
+				<td><input type = "radio" id = "rdo" name = "rdo">0000002000665XXXX</td>
+				<td>Rangan</td>
+				<td>Exhibition Road</td>
+				<td>1000000<input type = "button" value = "Change"></td>
+				</tr>
+				<tr align = "center">
+				<td><input type = "radio" id = "rdo" name = "rdo">0000002011554XXXX</td>
+				<td>Kumar</td>
+				<td>Bhagalpur</td>
+				<td>10000<input type = "button" value = "Change"></td>
+				</tr>
+				<tr align = "center">
+				<td><input type = "radio" id = "rdo" name = "rdo">0000003287936XXXX</td>
+				<td>Kumari</td>
+				<td>Desri</td>
+				<td>25000<input type = "button" value = "Change"></td>
+				</tr>
+				<tr align = "center">
+				<td><input type = "radio" id = "rdo" name = "rdo">00000020121228XXXX</td>
+				<td>Sen</td>
+				<td>PBB Salt Lake</td>
+				<td>10000<input type = "button" value = "Change"></td>
+				</tr>
+			</table>	
+				<br><br>
+				<label>Account Number</label>
+				<input class="onee" type="number" id = "no" name ="no" placeholder = "Enter Account Number"><br>
+				<h3>Select Payment Option</h3>
+				<label>Payment Mode<span id="amt">*</label></span>
+				<input class="o" type = "radio" id = "rdo" name = "rdo">Pay now
+				<input class="o" type = "radio" id = "rdo" name = "rdo">Schedule Later
+				<input class="o" type = "radio" id = "rdo" name = "rdo">Standing Instructions
+				<h3 align = "right">View last five transactions and continue with full fund transfer</h3>
+				<h4>Please note, Beneficiary Account will ONLY be used for Electronic Fund Transfer(please ensure correctness),the Beneficiary Account provided will not be considered for Electronic Fund Transfer as per RBI guidance</h4>
+				<input class="t" type = "submit" value = "Submit"><input class="tt" type = "submit" value = "Cancel">
+			
+		</form>
+	</body>
+
+</html>
