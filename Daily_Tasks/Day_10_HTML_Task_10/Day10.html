@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My Study Corner</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ea;
+            color: #333;
+        }
+
+        /* Header */
+
+        header {
+            background-color: #2f4858;
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #dce5e9;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            background-color: white;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2f4858;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e09f3e;
+        }
+
+
+        /* Common Section */
+
+        section {
+            width: 85%;
+            margin: 45px auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h2 {
+            color: #2f4858;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .title p {
+            color: #777;
+        }
+
+
+        /* Section 1 - Home */
+
+        .home {
+            min-height: 400px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+        .home-text {
+            flex: 1;
+        }
+
+        .home-text h2 {
+            color: #2f4858;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .home-text p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 22px;
+
+            background-color: #e09f3e;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .home-button:hover {
+            background-color: #c98525;
+        }
+
+        .home-box {
+            flex: 1;
+
+            background-color: #d8e2dc;
+            padding: 50px;
+            border-radius: 15px;
+
+            text-align: center;
+        }
+
+        .home-box h3 {
+            color: #2f4858;
+            font-size: 28px;
+        }
+
+        .home-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+
+        /* Section 2 - Subjects */
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .subject-box {
+            background-color: white;
+            padding: 30px;
+
+            border-radius: 10px;
+
+            border-top: 5px solid #e09f3e;
+
+            box-shadow: 0 3px 10px #ddd;
+
+            transition: 0.3s;
+        }
+
+        .subject-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-box h3 {
+            color: #2f4858;
+            margin-bottom: 12px;
+        }
+
+        .subject-box p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .subject-box span {
+            display: inline-block;
+
+            background-color: #eef1ed;
+            color: #2f4858;
+
+            padding: 6px 10px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+
+        /* Section 3 - Daily Routine */
+
+        .routine-section {
+            background-color: white;
+
+            width: 85%;
+
+            padding: 45px;
+
+            border-radius: 12px;
+        }
+
+        .routine {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .routine-item {
+            display: flex;
+            align-items: center;
+
+            padding: 18px 10px;
+
+            border-bottom: 1px solid #eee;
+        }
+
+        .time {
+            width: 130px;
+
+            color: #e09f3e;
+
+            font-weight: bold;
+        }
+
+        .activity {
+            flex: 1;
+        }
+
+        .activity h3 {
+            margin: 0 0 5px;
+            color: #2f4858;
+        }
+
+        .activity p {
+            margin: 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* Section 4 - Study Tips */
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .tips-box {
+            background-color: #fff;
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .tips-box h3 {
+            color: #2f4858;
+            margin-bottom: 20px;
+        }
+
+        .tips-box ul {
+            padding-left: 20px;
+        }
+
+        .tips-box li {
+            margin-bottom: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .tips-box li::marker {
+            color: #e09f3e;
+        }
+
+
+        /* Section 5 - Motivation */
+
+        .motivation {
+            background-color: #2f4858;
+
+            padding: 65px 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .motivation h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .motivation p {
+            max-width: 650px;
+            margin: auto;
+
+            color: #dce5e9;
+
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .quote {
+            margin-top: 25px;
+
+            font-size: 20px;
+            font-style: italic;
+
+            color: #f1c27d;
+        }
+
+
+        /* Extra Section */
+
+        .progress {
+            margin-top: 30px;
+
+            background-color: #eee;
+
+            height: 10px;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .progress span {
+            display: block;
+
+            width: 75%;
+
+            height: 100%;
+
+            background-color: #e09f3e;
+        }
+
+
+        /* Footer */
+
+        footer {
+            margin-top: 60px;
+
+            background-color: #263b49;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: #d5dfe3;
+        }
+
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            .home {
+                flex-direction: column;
+            }
+
+            .subjects {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
+
+            .routine-section {
+                width: 85%;
+                padding: 25px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            section {
+                width: 90%;
+            }
+
+            .home-text h2 {
+                font-size: 32px;
+            }
+
+            .routine-item {
+                display: block;
+                padding: 18px 0;
+            }
+
+            .time {
+                margin-bottom: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>My Study Corner</h1>
+
+        <p>A simple place to learn, focus and improve</p>
+
+    </header>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#subjects">Subjects</a>
+
+        <a href="#routine">Routine</a>
+
+        <a href="#tips">Study Tips</a>
+
+        <a href="#motivation">Motivation</a>
+
+    </nav>
+
+
+    <!-- Section 1 : Home -->
+
+    <section class="home" id="home">
+
+        <div class="home-text">
+
+            <h2>
+                Learn something new
+                every day.
+            </h2>
+
+            <p>
+                Having a proper study space and a simple plan
+                can make learning more comfortable and effective.
+                This page helps to organize daily learning,
+                subjects and study habits.
+            </p>
+
+            <a href="#subjects" class="home-button">
+                Start Learning
+            </a>
+
+        </div>
+
+
+        <div class="home-box">
+
+            <h3>Today's Goal</h3>
+
+            <p>
+                Complete at least one important topic
+                and spend some time practicing what you learn.
+            </p>
+
+            <div class="progress">
+                <span></span>
+            </div>
+
+            <p>
+                Study Progress: 75%
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section 2 : Subjects -->
+
+    <section id="subjects">
+
+        <div class="title">
+
+            <h2>My Subjects</h2>
+
+            <p>
+                Topics that I am currently learning
+            </p>
+
+        </div>
+
+
+        <div class="subjects">
+
+            <div class="subject-box">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Learning how websites are created using
+                    HTML, CSS and JavaScript.
+                </p>
+
+                <span>HTML & CSS</span>
+
+            </div>
+
+
+            <div class="subject-box">
+
+                <h3>Programming</h3>
+
+                <p>
+                    Practicing programming concepts and
+                    improving logical problem solving skills.
+                </p>
+
+                <span>Programming</span>
+
+            </div>
+
+
+            <div class="subject-box">
+
+                <h3>Database</h3>
+
+                <p>
+                    Understanding how information is stored,
+                    organized and managed using databases.
+                </p>
+
+                <span>SQL</span>
+
+            </div>
+
+
+            <div class="subject-box">
+
+                <h3>Communication</h3>
+
+                <p>
+                    Improving vocabulary, speaking skills
+                    and confidence in communication.
+                </p>
+
+                <span>English</span>
+
+            </div>
+
+
+            <div class="subject-box">
+
+                <h3>Aptitude</h3>
+
+                <p>
+                    Practicing numerical, logical and
+                    reasoning questions regularly.
+                </p>
+
+                <span>Practice</span>
+
+            </div>
+
+
+            <div class="subject-box">
+
+                <h3>General Knowledge</h3>
+
+                <p>
+                    Reading useful information about technology,
+                    current events and the world around us.
+                </p>
+
+                <span>Daily Reading</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section 3 : Daily Routine -->
+
+    <section class="routine-section" id="routine">
+
+        <div class="title">
+
+            <h2>My Daily Routine</h2>
+
+            <p>
+                A simple plan for a productive day
+            </p>
+
+        </div>
+
+
+        <div class="routine">
+
+            <div class="routine-item">
+
+                <div class="time">
+                    06:30 AM
+                </div>
+
+                <div class="activity">
+
+                    <h3>Morning Start</h3>
+
+                    <p>
+                        Wake up, get ready and prepare
+                        for the day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="routine-item">
+
+                <div class="time">
+                    09:00 AM
+                </div>
+
+                <div class="activity">
+
+                    <h3>Learning Time</h3>
+
+                    <p>
+                        Focus on important subjects
+                        without distractions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="routine-item">
+
+                <div class="time">
+                    01:00 PM
+                </div>
+
+                <div class="activity">
+
+                    <h3>Break Time</h3>
+
+                    <p>
+                        Take a proper break and relax
+                        for some time.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="routine-item">
+
+                <div class="time">
+                    04:00 PM
+                </div>
+
+                <div class="activity">
+
+                    <h3>Practice</h3>
+
+                    <p>
+                        Solve coding and aptitude
+                        practice questions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="routine-item">
+
+                <div class="time">
+                    08:00 PM
+                </div>
+
+                <div class="activity">
+
+                    <h3>Revision</h3>
+
+                    <p>
+                        Review the important topics
+                        learned during the day.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section 4 : Study Tips -->
+
+    <section id="tips">
+
+        <div class="title">
+
+            <h2>Study Tips</h2>
+
+            <p>
+                Simple habits that make studying easier
+            </p>
+
+        </div>
+
+
+        <div class="tips-container">
+
+            <div class="tips-box">
+
+                <h3>Before Studying</h3>
+
+                <ul>
+
+                    <li>
+                        Keep your study area clean.
+                    </li>
+
+                    <li>
+                        Decide what topic you want to complete.
+                    </li>
+
+                    <li>
+                        Keep your phone away from distractions.
+                    </li>
+
+                    <li>
+                        Prepare the books and materials you need.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="tips-box">
+
+                <h3>While Studying</h3>
+
+                <ul>
+
+                    <li>
+                        Concentrate on one topic at a time.
+                    </li>
+
+                    <li>
+                        Write down important points.
+                    </li>
+
+                    <li>
+                        Take short breaks when needed.
+                    </li>
+
+                    <li>
+                        Practice what you have learned.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="tips-box">
+
+                <h3>After Studying</h3>
+
+                <ul>
+
+                    <li>
+                        Revise the important concepts.
+                    </li>
+
+                    <li>
+                        Try to explain the topic in your own words.
+                    </li>
+
+                    <li>
+                        Note down topics that need more practice.
+                    </li>
+
+                    <li>
+                        Plan what you will study next.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="tips-box">
+
+                <h3>Remember</h3>
+
+                <ul>
+
+                    <li>
+                        Consistency is more important than studying
+                        for many hours once.
+                    </li>
+
+                    <li>
+                        Do not be afraid of making mistakes.
+                    </li>
+
+                    <li>
+                        Practice regularly.
+                    </li>
+
+                    <li>
+                        Give yourself enough rest.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section 5 : Motivation -->
+
+    <section id="motivation">
+
+        <div class="motivation">
+
+            <h2>Keep Going</h2>
+
+            <p>
+                Learning is not about becoming perfect in one day.
+                It is about becoming a little better than yesterday.
+                Every small effort you make today will help you
+                move closer to your goals.
+            </p>
+
+            <p class="quote">
+                "Small steps every day create big results."
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>My Study Corner</p>
+
+        <p>
+            Learn • Practice • Improve
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
