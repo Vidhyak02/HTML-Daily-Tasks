@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean Coffee Shop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f3ed;
+            color: #3e2723;
+        }
+
+        /* Navbar */
+
+        header {
+            background-color: #3e2723;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d7a86e;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #d7a86e;
+        }
+
+        /* Home */
+
+        .home {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            padding: 50px 8%;
+            background:
+                linear-gradient(rgba(40, 25, 20, 0.65), rgba(40, 25, 20, 0.65)),
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home-content {
+            max-width: 600px;
+            color: white;
+        }
+
+        .home-content h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .home-content h1 span {
+            color: #e0b27b;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d7a86e;
+            color: #3e2723;
+            padding: 13px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        /* Common Section */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #765548;
+        }
+
+        /* About */
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            width: 50%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            width: 50%;
+        }
+
+        .about-content h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            color: #62483e;
+            margin-bottom: 15px;
+        }
+
+        /* Menu */
+
+        .menu {
+            background-color: #eee3d6;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .coffee-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .coffee-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .coffee-info {
+            padding: 20px;
+        }
+
+        .coffee-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .coffee-info p {
+            color: #765548;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #a45c35;
+        }
+
+        /* Why Us */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #eaded2;
+        }
+
+        .feature .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            color: #765548;
+            line-height: 1.6;
+        }
+
+        /* Contact */
+
+        .contact {
+            background-color: #3e2723;
+            color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .contact-info {
+            width: 50%;
+        }
+
+        .contact-info h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+            color: #eadbd2;
+        }
+
+        .contact-form {
+            width: 45%;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            padding: 13px 25px;
+            background-color: #d7a86e;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #281815;
+            color: #d8c6bc;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .home-content h1 {
+                font-size: 40px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-content {
+                width: 100%;
+            }
+
+            .menu-container,
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="logo">Brew<span>&</span>Bean</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h1>Fresh Coffee, <span>Happy Moments</span></h1>
+
+            <p>
+                Start your day with the rich aroma of freshly brewed coffee.
+                At Brew & Bean, every cup is made with care and served with a smile.
+            </p>
+
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+                     alt="Coffee shop">
+            </div>
+
+            <div class="about-content">
+                <h2>Our Coffee Story</h2>
+
+                <p>
+                    Brew & Bean started with a simple idea — to create a
+                    comfortable place where people can enjoy great coffee
+                    and good conversations.
+                </p>
+
+                <p>
+                    We carefully select quality coffee beans and prepare
+                    every drink fresh. Whether you are meeting friends,
+                    working on your laptop, or simply relaxing, our shop
+                    is always ready to welcome you.
+                </p>
+
+                <a href="#contact" class="btn">Visit Us</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu -->
+
+    <section class="menu" id="menu">
+
+        <div class="title">
+            <h2>Our Popular Menu</h2>
+            <p>Something special for every coffee lover</p>
+        </div>
+
+        <div class="menu-container">
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                     alt="Cappuccino">
+
+                <div class="coffee-info">
+                    <h3>Cappuccino</h3>
+                    <p>
+                        Smooth espresso with steamed milk and a soft layer
+                        of creamy foam.
+                    </p>
+                    <div class="price">₹140</div>
+                </div>
+            </div>
+
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80"
+                     alt="Latte">
+
+                <div class="coffee-info">
+                    <h3>Cafe Latte</h3>
+                    <p>
+                        A balanced combination of rich espresso and warm
+                        steamed milk.
+                    </p>
+                    <div class="price">₹160</div>
+                </div>
+            </div>
+
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                     alt="Cold Coffee">
+
+                <div class="coffee-info">
+                    <h3>Cold Coffee</h3>
+                    <p>
+                        A refreshing chilled coffee blended with milk and
+                        a touch of sweetness.
+                    </p>
+                    <div class="price">₹150</div>
+                </div>
+            </div>
+
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80"
+                     alt="Espresso">
+
+                <div class="coffee-info">
+                    <h3>Espresso</h3>
+                    <p>
+                        A strong and rich coffee for those who love a bold
+                        coffee flavour.
+                    </p>
+                    <div class="price">₹100</div>
+                </div>
+            </div>
+
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=600&q=80"
+                     alt="Mocha">
+
+                <div class="coffee-info">
+                    <h3>Chocolate Mocha</h3>
+                    <p>
+                        Creamy coffee combined with chocolate for a delicious
+                        sweet flavour.
+                    </p>
+                    <div class="price">₹180</div>
+                </div>
+            </div>
+
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=600&q=80"
+                     alt="Americano">
+
+                <div class="coffee-info">
+                    <h3>Americano</h3>
+                    <p>
+                        Simple, smooth and refreshing coffee made with
+                        espresso and hot water.
+                    </p>
+                    <div class="price">₹120</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+
+    <section>
+
+        <div class="title">
+            <h2>Why Choose Brew & Bean?</h2>
+            <p>More than just a cup of coffee</p>
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">☕</div>
+                <h3>Freshly Brewed</h3>
+                <p>
+                    Every cup is prepared fresh using carefully selected
+                    coffee beans.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🌱</div>
+                <h3>Quality Beans</h3>
+                <p>
+                    We use quality beans to give you a rich and enjoyable
+                    coffee experience.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">😊</div>
+                <h3>Friendly Place</h3>
+                <p>
+                    Relax, meet your friends or spend some quiet time in
+                    our comfortable space.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Let's Have Coffee!</h2>
+
+                <p>
+                    Have a question or want to visit us? Send us a message.
+                </p>
+
+                <p>📍 24 Coffee Street, Nagercoil</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ hello@brewandbean.com</p>
+                <p>🕘 Monday - Sunday: 9:00 AM - 9:00 PM</p>
+            </div>
+
+
+            <div class="contact-form">
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Your Email">
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Brew & Bean Coffee Shop | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
