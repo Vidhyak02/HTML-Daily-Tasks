@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Artéa — Digital Art Gallery</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .serif {
+            font-family: "Playfair Display", serif;
+        }
+
+    </style>
+
+</head>
+
+
+<body class="bg-[#f5f2ec] text-[#171717]">
+
+
+    <!-- ==================================================
+         NAVBAR
+    =================================================== -->
+
+    <header class="fixed top-0 left-0 w-full z-50
+                   bg-[#f5f2ec]/90 backdrop-blur-md
+                   border-b border-black/10">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <nav class="h-20 flex items-center
+                        justify-between">
+
+                <!-- Logo -->
+
+                <a href="#home"
+                   class="text-2xl font-semibold
+                          tracking-[0.25em]">
+
+                    ARTÉA<span class="text-orange-600">.</span>
+
+                </a>
+
+
+                <!-- Menu -->
+
+                <div class="hidden md:flex items-center
+                            gap-10 text-sm">
+
+                    <a href="#home"
+                       class="hover:text-orange-600
+                              transition">
+
+                        Home
+
+                    </a>
+
+                    <a href="#collection"
+                       class="hover:text-orange-600
+                              transition">
+
+                        Collection
+
+                    </a>
+
+                    <a href="#artists"
+                       class="hover:text-orange-600
+                              transition">
+
+                        Artists
+
+                    </a>
+
+                    <a href="#exhibition"
+                       class="hover:text-orange-600
+                              transition">
+
+                        Exhibition
+
+                    </a>
+
+                    <a href="#about"
+                       class="hover:text-orange-600
+                              transition">
+
+                        About
+
+                    </a>
+
+                </div>
+
+
+                <!-- Button -->
+
+                <a href="#contact"
+                   class="hidden sm:block
+                          bg-black text-white
+                          px-6 py-3 text-sm
+                          hover:bg-orange-600
+                          transition">
+
+                    Visit Gallery
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ==================================================
+             01 HERO
+        =================================================== -->
+
+        <section id="home"
+                 class="min-h-screen pt-20
+                        flex items-center">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10
+                        py-20 w-full">
+
+                <div class="grid lg:grid-cols-2
+                            gap-14 lg:gap-20
+                            items-center">
+
+
+                    <!-- Hero Content -->
+
+                    <div>
+
+                        <div class="flex items-center
+                                    gap-3 mb-8">
+
+                            <span class="w-10 h-px
+                                         bg-orange-600"></span>
+
+                            <p class="text-xs tracking-[0.3em]
+                                      text-gray-500">
+
+                                DIGITAL ART GALLERY
+
+                            </p>
+
+                        </div>
+
+
+                        <h1 class="serif text-6xl sm:text-7xl
+                                   lg:text-8xl leading-[0.95]
+                                   font-normal">
+
+                            Art that
+
+                            <span class="italic
+                                         text-orange-600">
+
+                                feels
+
+                            </span>
+
+                            different.
+
+                        </h1>
+
+
+                        <p class="mt-8 max-w-lg
+                                  text-gray-600
+                                  leading-7">
+
+                            A contemporary digital art space
+                            where creativity, technology and
+                            imagination come together.
+
+                        </p>
+
+
+                        <div class="mt-10 flex flex-wrap
+                                    items-center gap-5">
+
+                            <a href="#collection"
+                               class="bg-black text-white
+                                      px-7 py-4
+                                      text-sm
+                                      hover:bg-orange-600
+                                      transition">
+
+                                Explore Collection
+                                <span class="ml-4">↗</span>
+
+                            </a>
+
+                            <a href="#about"
+                               class="text-sm
+                                      border-b border-black
+                                      pb-1">
+
+                                Our Story →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Hero Image -->
+
+                    <div class="relative">
+
+                        <div class="aspect-[4/5]
+                                    overflow-hidden">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1000&q=85"
+                                alt="Digital Art"
+                                class="w-full h-full
+                                       object-cover
+                                       hover:scale-105
+                                       transition duration-700">
+
+                        </div>
+
+
+                        <div class="absolute -bottom-7
+                                    -left-7
+                                    bg-white
+                                    p-6 shadow-xl
+                                    w-64">
+
+                            <p class="text-xs
+                                      text-gray-400
+                                      mb-2">
+
+                                FEATURED WORK
+
+                            </p>
+
+                            <h3 class="serif text-xl">
+
+                                Inner Universe
+
+                            </h3>
+
+                            <p class="text-xs
+                                      text-gray-500 mt-1">
+
+                                Digital Composition · 2026
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             02 INTRO
+        =================================================== -->
+
+        <section class="bg-black text-white py-28">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10">
+
+                <div class="grid lg:grid-cols-12
+                            gap-10">
+
+                    <div class="lg:col-span-3">
+
+                        <p class="text-xs
+                                  tracking-[0.3em]
+                                  text-gray-500">
+
+                            01 — INTRODUCTION
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="lg:col-span-8">
+
+                        <h2 class="serif text-4xl sm:text-5xl
+                                   lg:text-6xl
+                                   leading-tight">
+
+                            We believe digital art
+                            should not just be
+                            <span class="italic
+                                         text-orange-500">
+
+                                seen,
+
+                            </span>
+
+                            it should be experienced.
+
+                        </h2>
+
+
+                        <p class="mt-8 max-w-2xl
+                                  text-gray-400
+                                  leading-7">
+
+                            ARTÉA connects emerging artists
+                            with curious minds through
+                            carefully curated digital
+                            experiences.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             03 COLLECTION
+        =================================================== -->
+
+        <section id="collection"
+                 class="py-28">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10">
+
+
+                <!-- Heading -->
+
+                <div class="flex flex-col md:flex-row
+                            md:items-end
+                            justify-between
+                            gap-6 mb-14">
+
+                    <div>
+
+                        <p class="text-xs
+                                  tracking-[0.3em]
+                                  text-orange-600 mb-4">
+
+                            02 — COLLECTION
+
+                        </p>
+
+                        <h2 class="serif text-5xl
+                                   lg:text-6xl">
+
+                            Selected <i>Works</i>
+
+                        </h2>
+
+                    </div>
+
+                    <p class="max-w-sm
+                              text-sm text-gray-500">
+
+                        Explore a collection of
+                        contemporary works created by
+                        artists from around the world.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Gallery -->
+
+                <div class="grid md:grid-cols-2
+                            lg:grid-cols-3
+                            gap-8">
+
+
+                    <!-- Image 1 -->
+
+                    <article class="group">
+
+                        <div class="aspect-[4/5]
+                                    overflow-hidden
+                                    bg-gray-200">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=900&q=85"
+                                alt="Artwork"
+                                class="w-full h-full
+                                       object-cover
+                                       group-hover:scale-105
+                                       transition duration-700">
+
+                        </div>
+
+                        <div class="py-5
+                                    flex justify-between
+                                    border-b border-black/10">
+
+                            <div>
+
+                                <h3 class="serif text-xl">
+                                    Silent Universe
+                                </h3>
+
+                                <p class="text-xs
+                                          text-gray-500 mt-1">
+
+                                    Abstract · Digital
+
+                                </p>
+
+                            </div>
+
+                            <span>↗</span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Image 2 -->
+
+                    <article class="group
+                                    lg:mt-24">
+
+                        <div class="aspect-[4/5]
+                                    overflow-hidden">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=900&q=85"
+                                alt="Artwork"
+                                class="w-full h-full
+                                       object-cover
+                                       group-hover:scale-105
+                                       transition duration-700">
+
+                        </div>
+
+                        <div class="py-5
+                                    flex justify-between
+                                    border-b border-black/10">
+
+                            <div>
+
+                                <h3 class="serif text-xl">
+                                    Chromatic Mind
+                                </h3>
+
+                                <p class="text-xs
+                                          text-gray-500 mt-1">
+
+                                    Contemporary · Art
+
+                                </p>
+
+                            </div>
+
+                            <span>↗</span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Image 3 -->
+
+                    <article class="group">
+
+                        <div class="aspect-[4/5]
+                                    overflow-hidden">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=85"
+                                alt="Artwork"
+                                class="w-full h-full
+                                       object-cover
+                                       group-hover:scale-105
+                                       transition duration-700">
+
+                        </div>
+
+                        <div class="py-5
+                                    flex justify-between
+                                    border-b border-black/10">
+
+                            <div>
+
+                                <h3 class="serif text-xl">
+                                    Inner Light
+                                </h3>
+
+                                <p class="text-xs
+                                          text-gray-500 mt-1">
+
+                                    Visual · Expression
+
+                                </p>
+
+                            </div>
+
+                            <span>↗</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="mt-12 text-center">
+
+                    <a href="#"
+                       class="inline-block
+                              border border-black
+                              px-8 py-4 text-sm
+                              hover:bg-black
+                              hover:text-white
+                              transition">
+
+                        View All Artworks →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             04 CATEGORIES
+        =================================================== -->
+
+        <section class="bg-[#ded8ce] py-28">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10">
+
+                <p class="text-xs tracking-[0.3em]
+                          text-gray-500 mb-5">
+
+                    03 — EXPLORE
+
+                </p>
+
+                <h2 class="serif text-5xl mb-14">
+
+                    Find your <i>world.</i>
+
+                </h2>
+
+
+                <div class="grid sm:grid-cols-2
+                            lg:grid-cols-4
+                            gap-px bg-black/10">
+
+
+                    <a href="#"
+                       class="group bg-[#ded8ce]
+                              p-8 h-64
+                              flex flex-col
+                              justify-between
+                              hover:bg-black
+                              hover:text-white
+                              transition">
+
+                        <span class="text-xs">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3 class="serif text-3xl">
+                                Abstract
+                            </h3>
+
+                            <p class="text-xs
+                                      opacity-60 mt-2">
+
+                                32 artworks
+
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="group bg-[#ded8ce]
+                              p-8 h-64
+                              flex flex-col
+                              justify-between
+                              hover:bg-black
+                              hover:text-white
+                              transition">
+
+                        <span class="text-xs">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3 class="serif text-3xl">
+                                Digital
+                            </h3>
+
+                            <p class="text-xs
+                                      opacity-60 mt-2">
+
+                                28 artworks
+
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="group bg-[#ded8ce]
+                              p-8 h-64
+                              flex flex-col
+                              justify-between
+                              hover:bg-black
+                              hover:text-white
+                              transition">
+
+                        <span class="text-xs">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3 class="serif text-3xl">
+                                3D Art
+                            </h3>
+
+                            <p class="text-xs
+                                      opacity-60 mt-2">
+
+                                24 artworks
+
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="group bg-[#ded8ce]
+                              p-8 h-64
+                              flex flex-col
+                              justify-between
+                              hover:bg-black
+                              hover:text-white
+                              transition">
+
+                        <span class="text-xs">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3 class="serif text-3xl">
+                                Illustration
+                            </h3>
+
+                            <p class="text-xs
+                                      opacity-60 mt-2">
+
+                                36 artworks
+
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             05 ARTISTS
+        =================================================== -->
+
+        <section id="artists"
+                 class="py-28 bg-[#111111]
+                        text-white">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10">
+
+                <div class="flex flex-col
+                            md:flex-row
+                            justify-between
+                            md:items-end
+                            mb-14">
+
+                    <div>
+
+                        <p class="text-xs
+                                  tracking-[0.3em]
+                                  text-orange-500 mb-5">
+
+                            04 — ARTISTS
+
+                        </p>
+
+                        <h2 class="serif text-5xl
+                                   lg:text-6xl">
+
+                            Meet the <i>Creators</i>
+
+                        </h2>
+
+                    </div>
+
+                    <a href="#"
+                       class="mt-5 md:mt-0
+                              text-sm
+                              border-b border-white/30
+                              pb-2">
+
+                        View all artists →
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="divide-y
+                            divide-white/10">
+
+
+                    <div class="py-8
+                                grid md:grid-cols-12
+                                gap-6 items-center
+                                group">
+
+                        <span class="text-gray-600
+                                     md:col-span-1">
+
+                            01
+
+                        </span>
+
+                        <div class="md:col-span-2
+                                    h-20 w-20
+                                    overflow-hidden">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80"
+                                class="w-full h-full
+                                       object-cover
+                                       grayscale
+                                       group-hover:grayscale-0
+                                       transition">
+
+                        </div>
+
+                        <div class="md:col-span-6">
+
+                            <h3 class="serif text-3xl">
+                                Elena Morris
+                            </h3>
+
+                            <p class="text-xs
+                                      text-gray-500">
+
+                                Digital Artist · London
+
+                            </p>
+
+                        </div>
+
+                        <span class="md:col-span-3
+                                     text-right
+                                     text-orange-500">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="py-8
+                                grid md:grid-cols-12
+                                gap-6 items-center
+                                group">
+
+                        <span class="text-gray-600
+                                     md:col-span-1">
+
+                            02
+
+                        </span>
+
+                        <div class="md:col-span-2
+                                    h-20 w-20
+                                    overflow-hidden">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                                class="w-full h-full
+                                       object-cover
+                                       grayscale
+                                       group-hover:grayscale-0
+                                       transition">
+
+                        </div>
+
+                        <div class="md:col-span-6">
+
+                            <h3 class="serif text-3xl">
+                                Daniel Lee
+                            </h3>
+
+                            <p class="text-xs
+                                      text-gray-500">
+
+                                3D Artist · Seoul
+
+                            </p>
+
+                        </div>
+
+                        <span class="md:col-span-3
+                                     text-right
+                                     text-orange-500">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="py-8
+                                grid md:grid-cols-12
+                                gap-6 items-center
+                                group">
+
+                        <span class="text-gray-600
+                                     md:col-span-1">
+
+                            03
+
+                        </span>
+
+                        <div class="md:col-span-2
+                                    h-20 w-20
+                                    overflow-hidden">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=300&q=80"
+                                class="w-full h-full
+                                       object-cover
+                                       grayscale
+                                       group-hover:grayscale-0
+                                       transition">
+
+                        </div>
+
+                        <div class="md:col-span-6">
+
+                            <h3 class="serif text-3xl">
+                                Maya Wilson
+                            </h3>
+
+                            <p class="text-xs
+                                      text-gray-500">
+
+                                Visual Artist · New York
+
+                            </p>
+
+                        </div>
+
+                        <span class="md:col-span-3
+                                     text-right
+                                     text-orange-500">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             06 EXHIBITION
+        =================================================== -->
+
+        <section id="exhibition"
+                 class="py-28">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10">
+
+                <div class="grid lg:grid-cols-2
+                            gap-14 items-center">
+
+
+                    <div class="relative">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1000&q=85"
+                            alt="Art Exhibition"
+                            class="w-full aspect-[4/5]
+                                   object-cover">
+
+                        <div class="absolute
+                                    bottom-6 left-6
+                                    bg-orange-600
+                                    text-white
+                                    w-28 h-28
+                                    flex flex-col
+                                    items-center
+                                    justify-center">
+
+                            <span class="serif
+                                         text-4xl">
+
+                                24
+
+                            </span>
+
+                            <span class="text-xs
+                                         tracking-widest">
+
+                                OCT
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <p class="text-xs
+                                  tracking-[0.3em]
+                                  text-orange-600 mb-5">
+
+                            05 — UPCOMING EXHIBITION
+
+                        </p>
+
+                        <h2 class="serif text-6xl
+                                   lg:text-8xl
+                                   leading-none">
+
+                            Beyond
+
+                            <br>
+
+                            <i>Reality</i>
+
+                        </h2>
+
+                        <p class="mt-8 max-w-lg
+                                  text-gray-600
+                                  leading-7">
+
+                            An immersive digital exhibition
+                            exploring dreams, identity and
+                            the future of visual expression.
+
+                        </p>
+
+
+                        <div class="grid grid-cols-3
+                                    gap-5
+                                    border-y
+                                    border-black/10
+                                    py-6 mt-10">
+
+                            <div>
+
+                                <p class="text-xs
+                                          text-gray-400">
+
+                                    ARTISTS
+
+                                </p>
+
+                                <p class="serif text-2xl
+                                          mt-2">
+
+                                    18
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-xs
+                                          text-gray-400">
+
+                                    ARTWORKS
+
+                                </p>
+
+                                <p class="serif text-2xl
+                                          mt-2">
+
+                                    42
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-xs
+                                          text-gray-400">
+
+                                    FORMAT
+
+                                </p>
+
+                                <p class="serif text-2xl
+                                          mt-2">
+
+                                    ONLINE
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="#contact"
+                           class="inline-block
+                                  mt-8
+                                  bg-black
+                                  text-white
+                                  px-7 py-4
+                                  text-sm
+                                  hover:bg-orange-600
+                                  transition">
+
+                            Reserve Your Place →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             07 ABOUT + CONTACT
+        =================================================== -->
+
+        <section id="about"
+                 class="bg-[#ded8ce] py-28">
+
+            <div class="max-w-7xl mx-auto
+                        px-6 lg:px-10">
+
+
+                <div class="grid lg:grid-cols-2
+                            gap-20">
+
+
+                    <div>
+
+                        <p class="text-xs
+                                  tracking-[0.3em]
+                                  text-orange-600 mb-5">
+
+                            06 — ABOUT ARTÉA
+
+                        </p>
+
+                        <h2 class="serif text-5xl
+                                   lg:text-7xl
+                                   leading-tight">
+
+                            More than
+
+                            <br>
+
+                            <i>a gallery.</i>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="serif text-2xl
+                                  leading-relaxed">
+
+                            We believe art should make
+                            you stop, look twice and
+                            feel something.
+
+                        </p>
+
+                        <p class="mt-7 text-gray-600
+                                  leading-7">
+
+                            ARTÉA gives digital artists a
+                            platform to experiment,
+                            express and connect with
+                            audiences across the world.
+
+                        </p>
+
+
+                        <div class="grid grid-cols-2
+                                    gap-8 mt-12">
+
+                            <div>
+
+                                <p class="serif text-5xl">
+                                    120<span class="text-orange-600">+</span>
+                                </p>
+
+                                <p class="text-xs
+                                          text-gray-500 mt-2">
+
+                                    Artworks
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <p class="serif text-5xl">
+                                    38
+                                </p>
+
+                                <p class="text-xs
+                                          text-gray-500 mt-2">
+
+                                    Artists
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div id="contact"
+                     class="mt-24 bg-black
+                            text-white p-8 sm:p-12
+                            lg:p-16">
+
+                    <div class="grid lg:grid-cols-2
+                                gap-14">
+
+                        <div>
+
+                            <p class="text-xs
+                                      tracking-[0.3em]
+                                      text-orange-500">
+
+                                07 — CONTACT
+
+                            </p>
+
+                            <h2 class="serif text-5xl
+                                       mt-5">
+
+                                Let's create
+                                <i>together.</i>
+
+                            </h2>
+
+                            <p class="text-gray-500
+                                      mt-6 max-w-md">
+
+                                Have an artwork,
+                                collaboration idea or
+                                simply want to say hello?
+
+                            </p>
+
+                        </div>
+
+
+                        <form>
+
+                            <div class="grid sm:grid-cols-2
+                                        gap-6">
+
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    class="bg-transparent
+                                           border-b
+                                           border-white/20
+                                           py-4 outline-none
+                                           focus:border-orange-500">
+
+                                <input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    class="bg-transparent
+                                           border-b
+                                           border-white/20
+                                           py-4 outline-none
+                                           focus:border-orange-500">
+
+                            </div>
+
+
+                            <textarea
+                                placeholder="Your Message"
+                                rows="4"
+                                class="w-full mt-8
+                                       bg-transparent
+                                       border-b
+                                       border-white/20
+                                       py-4 outline-none
+                                       resize-none
+                                       focus:border-orange-500">
+                            </textarea>
+
+
+                            <button
+                                type="submit"
+                                class="mt-8
+                                       bg-orange-600
+                                       px-7 py-4
+                                       text-sm
+                                       hover:bg-orange-500
+                                       transition">
+
+                                Send Message ↗
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="bg-black text-white">
+
+        <div class="max-w-7xl mx-auto
+                    px-6 lg:px-10
+                    py-16">
+
+            <div class="grid md:grid-cols-3
+                        gap-12
+                        border-b border-white/10
+                        pb-12">
+
+
+                <div>
+
+                    <h2 class="text-2xl
+                               tracking-[0.25em]">
+
+                        ARTÉA<span class="text-orange-600">
+                            .
+                        </span>
+
+                    </h2>
+
+                    <p class="text-gray-500
+                              text-sm mt-5 max-w-xs">
+
+                        A contemporary digital art gallery
+                        for curious minds.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-xs
+                              text-gray-500
+                              tracking-widest mb-5">
+
+                        EXPLORE
+
+                    </p>
+
+                    <div class="flex flex-col gap-3
+                                text-sm text-gray-400">
+
+                        <a href="#collection"
+                           class="hover:text-white">
+
+                            Collection
+
+                        </a>
+
+                        <a href="#artists"
+                           class="hover:text-white">
+
+                            Artists
+
+                        </a>
+
+                        <a href="#exhibition"
+                           class="hover:text-white">
+
+                            Exhibition
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-xs
+                              text-gray-500
+                              tracking-widest mb-5">
+
+                        SOCIAL
+
+                    </p>
+
+                    <div class="flex flex-col gap-3
+                                text-sm text-gray-400">
+
+                        <a href="#"
+                           class="hover:text-orange-500">
+
+                            Instagram
+
+                        </a>
+
+                        <a href="#"
+                           class="hover:text-orange-500">
+
+                            Behance
+
+                        </a>
+
+                        <a href="#"
+                           class="hover:text-orange-500">
+
+                            Pinterest
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row
+                        justify-between gap-3
+                        pt-6
+                        text-xs text-gray-600">
+
+                <p>
+                    © 2026 ARTÉA Gallery
+                </p>
+
+                <p>
+                    Digital Art · Contemporary Culture
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
